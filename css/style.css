@@ -3,7 +3,7 @@
   --secondary-color: #f99500;
   --light-color:aliceblue;
   --dark-color:#333;
-  --max-width:1100px;
+  --max-width:1300px;
 }
 .category{
   --sports-color:#f99500;
@@ -24,6 +24,9 @@ a{
   color: #333;
   text-decoration: none;
 }
+p{
+  margin: .5rem 0;
+}
 ul{
   list-style: none;
 }
@@ -32,7 +35,7 @@ img{
 }
 h1,h2,h3,h4,h5,h6{
   font-family: 'staatliches',cursive;
-  margin-bottom: .55rem;
+  margin: 1rem 0;
   line-height: 1.3rem;
 }
 
@@ -104,6 +107,10 @@ h1,h2,h3,h4,h5,h6{
 .p-2{padding: 2rem;}
 .p3-1{padding: 3rem;}
 
+.l-heading{
+  font-size: 3rem;
+}
+
 
 .bg-dark h1,
 .bg-dark h2,
@@ -116,6 +123,27 @@ h1,h2,h3,h4,h5,h6{
 .bg-secondary h2,
 .bg-secondary h3{
   color: #fff;
+}
+
+.list li{
+  list-style: none;
+  padding: .5rem 0;
+  border-bottom: #333 dotted 1px;
+  width: 90%;
+}
+.list li a:hover{
+  color: var(--primary-color) ;
+}
+
+/* inner page grid  */
+.page-container{
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 2rem;
+  margin: 2rem 0;
+}
+.page-container > *:first-child{
+  grid-row: 1/span 3;
 }
 /* navigation bar */
 #main-nav{
@@ -135,7 +163,7 @@ h1,h2,h3,h4,h5,h6{
 }
 #main-nav ul{
   display: flex;
-  justify-self: end;
+  justify-content: flex-end;
 }
 #main-nav ul li a{
   padding: 1rem;
@@ -194,7 +222,7 @@ h1,h2,h3,h4,h5,h6{
 #home-articles .articles-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5rem;
+  grid-gap: 1rem;
 }
 #home-articles .articles-container > *:first-child{
   display: grid;
@@ -209,4 +237,52 @@ h1,h2,h3,h4,h5,h6{
   grid-gap: 1rem;
   grid-column: 2/ span 2;
   align-items: center;
+}
+
+#main-footer{
+  background: var(--dark-color);
+  color: #fff;
+}
+#main-footer img{
+  width: 150px;
+}
+#main-footer a{
+  color: #fff;
+}
+#main-footer .footer-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 1.5rem;
+}
+#main-footer .footer-container > *:last-child{
+  grid-column: 1/span4;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: .5rem;
+}
+#main-footer .footer-container input[type='email']{
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: .5rem;
+}
+#main-footer .footer-container input[type='submit']{
+  width: 90%;
+}
+#main-footer .footer-container .links li a:hover{
+  color: var(--primary-color);
+}
+
+#article .meta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: .5rem;
+}
+#article .meta .category{
+  margin-top: .5rem;
+  font-size: 1rem;
+}
+#article .meta small {
+  font-size: 1rem;
 }
